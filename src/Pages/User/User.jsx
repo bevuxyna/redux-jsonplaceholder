@@ -10,15 +10,14 @@ function User() {
     const dispatch = useDispatch();
     const photos = useSelector((state) => state.photos);
 
-    // useEffect(() => {
-    //     dispatch(fetchPhotos);
-    // }, []);
+    useEffect(() => {
+        dispatch(fetchPhotos(userId));
+    }, [dispatch]);
 
     return (
         <div className='user__container'>
             <Link to='/' className='user__link'>Back to users list</Link>
             <h2 className='user__title'>{`User ${userId}`}</h2>
-            <button onClick={() => dispatch(fetchPhotos(userId))}>Get photos</button>
             <PhotoList photos={photos}/>
         </div>
     );

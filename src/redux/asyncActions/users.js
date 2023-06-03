@@ -1,7 +1,7 @@
 import { getUsersFailure, getUsersFetch, getUsersSuccess } from '../actions/users';
 
-export const fetchUsers = (dispatch) => {
-    return function () {
+export const fetchUsers = () => {
+    return (dispatch) => {
         dispatch(getUsersFetch());
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())

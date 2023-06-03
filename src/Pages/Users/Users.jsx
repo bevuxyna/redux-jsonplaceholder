@@ -8,14 +8,13 @@ function Users() {
     const dispatch = useDispatch();
     const users = useSelector((state) => state.users);
 
-    // useEffect(() => {
-    //     dispatch(fetchUsers);
-    // }, [dispatch]);
+    useEffect(() => {
+        dispatch(fetchUsers());
+    }, [dispatch]);
 
     return (
         <div>
             <h1>Users</h1>
-            <button onClick={dispatch(fetchUsers)}>Get users</button>
             <UsersList users={users} />
         </div>
     );
