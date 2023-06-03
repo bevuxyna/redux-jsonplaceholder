@@ -6,7 +6,7 @@ function UsersList({ users }) {
     return (
         <ul className='users-list__container'>
             {users &&
-                users.map((user) => {
+                users.users.map((user) => {
                 return (
                     <UserCard
                         key={user.id}

@@ -1,0 +1,15 @@
+.user__link {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 20px;
+  color: #083870;
+  text-decoration: none;
+  margin-bottom: 15px;
+  transition-duration: 0.7s;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}

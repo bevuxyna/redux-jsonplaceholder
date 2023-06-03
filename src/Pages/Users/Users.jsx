@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Users.scss';
 import UsersList from '../../Components/UserList/UsersList';
-import { fetchUsers } from '../../redux/asyncAction';
-
-
+import { fetchUsers } from '../../redux/asyncActions/users';
 
 function Users() {
     const dispatch = useDispatch();
