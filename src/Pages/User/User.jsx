@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './User.scss';
 import PhotoList from '../../Components/PhotoList/PhotoList';
 import { fetchPhotos } from '../../redux/asyncActions/photos';
+import Button from "../../Components/Button/Button";
 
 function User() {
     const { userId } = useParams();
@@ -19,6 +20,10 @@ function User() {
             <Link to='/' className='user__link'>Back to users list</Link>
             <h2 className='user__title'>{`User ${userId}`}</h2>
             <PhotoList photos={photos}/>
+            <div className='user-button__container'>
+                <Button buttonText='Back' />
+                <Button buttonText='Next' />
+            </div>
         </div>
     );
 }

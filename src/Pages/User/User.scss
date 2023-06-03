@@ -13,3 +13,9 @@
     opacity: 0.8;
   }
 }
+
+.user-button__container {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
