@@ -13,8 +13,8 @@ function Users() {
     }, [dispatch]);
 
     return (
-        <div>
-            <h1>Users</h1>
+        <div className='users__container'>
+            <h1 className='users__title'>Users from JSONPlaceholder</h1>
             <UsersList users={users} />
         </div>
     );

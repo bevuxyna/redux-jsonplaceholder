@@ -1,12 +1,13 @@
 .user__link {
   font-style: normal;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 18px;
   line-height: 20px;
   color: #083870;
   text-decoration: none;
   margin-bottom: 15px;
   transition-duration: 0.7s;
+  margin-left: 70px;
 
   &:hover {
     cursor: pointer;
@@ -14,8 +15,35 @@
   }
 }
 
+.user__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 38px;
+  margin-left: 70px;
+}
+
 .user-button__container {
   display: flex;
   justify-content: center;
   column-gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .user__link, .user__title {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .user__link {
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 10px;
+  }
+
+  .user__title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 10px;
+  }
 }

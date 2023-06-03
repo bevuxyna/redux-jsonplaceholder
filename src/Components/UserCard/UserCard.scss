@@ -25,3 +25,15 @@
     opacity: 0.8;
   }
 }
+
+@media screen and (max-width: 675px) {
+  .user-card {
+    padding: 20px;
+  }
+
+  .user-card__title {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+}
