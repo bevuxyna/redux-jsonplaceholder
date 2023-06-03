@@ -1,12 +1,29 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './PhotoList.scss';
 import PhotoCard from '../PhotoCard/PhotoCard';
 
-function PhotoList({ photos }) {
+function PhotoList({ foundPhotos }) {
+    const [photos, setPhotos] = useState([]);
+    const [maxCards, setMaxCards] = useState(10);
+
+    function setMovies() {
+        let photos = [];
+        foundPhotos.photos.forEach((item, i) => {
+            if (i < maxCards) {
+                photos.push(item);
+            }
+        });
+        setPhotos(photos);
+    }
+
+    useEffect(() => {
+        setMovies();
+    }, [foundPhotos]);
+
     return (
         <ul className='photo-list__container'>
             {photos &&
-                photos.photos.map((photo) => {
+                photos.map((photo) => {
                     return (
                         <PhotoCard
                             key={photo.id}

@@ -19,7 +19,7 @@ function User() {
         <div className='user__container'>
             <Link to='/' className='user__link'>Back to users list</Link>
             <h2 className='user__title'>{`User ${userId} photos`}</h2>
-            <PhotoList photos={photos}/>
+            <PhotoList foundPhotos={photos} />
             <div className='user-button__container'>
                 <Button buttonText='Back' />
                 <Button buttonText='Next' />
