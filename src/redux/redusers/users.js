@@ -15,7 +15,7 @@ const usersReducer = (state = defaultState, action) => {
             return {...state, loading: false, error: action.payload};
 
         case GET_USERS_SUCCESS:
-            return {...state, loading: false, users: [...state.users, action.payload]};
+            return {...state, loading: false, users: action.payload};
 
         default:
             return state;
