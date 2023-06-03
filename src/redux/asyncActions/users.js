@@ -1,4 +1,4 @@
-import {getUsersFailure, getUsersFetch, getUsersSuccess} from "./actions/users";
+import { getUsersFailure, getUsersFetch, getUsersSuccess } from '../actions/users';
 
 export const fetchUsers = (dispatch) => {
     return function () {
