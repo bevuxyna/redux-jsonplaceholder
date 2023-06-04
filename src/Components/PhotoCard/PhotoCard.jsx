@@ -1,7 +1,6 @@
 import React from 'react';
 import './PhotoCard.scss';
 
-
 function PhotoCard({ id, link }) {
     return (
         <li className='photo-card'>

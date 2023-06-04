@@ -1,7 +1,7 @@
 import React from 'react';
 import './Preloader.scss';
 
-const Preloader = () => {
+function Preloader() {
     return (
         <div className='loader'>loading</div>
     );

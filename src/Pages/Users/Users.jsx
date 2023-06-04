@@ -8,6 +8,7 @@ function Users() {
     const dispatch = useDispatch();
     const users = useSelector((state) => state.users);
     const loading = useSelector((state) => state.users.loading);
+    const error = useSelector((state) => state.users.error);
 
     useEffect(() => {
         dispatch(fetchUsers());
@@ -16,7 +17,7 @@ function Users() {
     return (
         <div className='users__container'>
             <h1 className='users__title'>Users from JSONPlaceholder</h1>
-            <UsersList loading={loading} users={users} />
+            <UsersList loading={loading} error={error} users={users} />
         </div>
     );
 }

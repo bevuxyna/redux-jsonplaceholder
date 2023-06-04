@@ -2,10 +2,15 @@ import React from 'react';
 import './UsersList.scss';
 import UserCard from '../UserCard/UserCard';
 import Preloader from '../Preloader/Preloader';
+import Error from '../Error/Error';
 
-function UsersList({ loading, users }) {
+function UsersList({ loading, error, users }) {
     if (loading) {
         return <Preloader />;
+    }
+
+    if (error) {
+        return <Error />;
     }
 
     return (

@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import './PhotoList.scss';
 import PhotoCard from '../PhotoCard/PhotoCard';
+import Preloader from '../Preloader/Preloader';
+import Error from '../Error/Error';
+import Button from '../Button/Button';
 
-function PhotoList({ foundPhotos }) {
+function PhotoList({ loading, error, foundPhotos }) {
     const [photos, setPhotos] = useState([]);
     const [maxCards, setMaxCards] = useState(10);
 
@@ -20,20 +23,34 @@ function PhotoList({ foundPhotos }) {
         setMovies();
     }, [foundPhotos]);
 
+    if (loading) {
+        return <Preloader />;
+    }
+
+    if (error) {
+        return <Error />;
+    }
+
     return (
-        <ul className='photo-list__container'>
-            {photos &&
-                photos.map((photo) => {
-                    return (
-                        <PhotoCard
-                            key={photo.id}
-                            id={photo.albumId}
-                            link={photo.url}
-                        />
-                    )
-                })
-            }
-        </ul>
+        <section className='photo-list'>
+            <ul className='photo-list__container'>
+                {photos &&
+                    photos.map((photo) => {
+                        return (
+                            <PhotoCard
+                                key={photo.id}
+                                id={photo.albumId}
+                                link={photo.url}
+                            />
+                        )
+                    })
+                }
+            </ul>
+            <div className='photo-list__buttons'>
+                <Button buttonText='Back' />
+                <Button buttonText='Next' />
+            </div>
+        </section>
     );
 }
 
