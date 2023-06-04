@@ -6,7 +6,6 @@ import Error from '../Error/Error';
 import Button from '../Button/Button';
 
 function PhotoList({ loading, error, currentPage, photos, setBackPage, setNextPage }) {
-
     if (loading) {
         return <Preloader />;
     }

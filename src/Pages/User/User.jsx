@@ -13,10 +13,13 @@ function User() {
     const loading = useSelector((state) => state.photos.loading);
     const error = useSelector((state) => state.photos.error);
     const currentPage = useSelector((state) => state.photos.currentPage);
+    const perPage = useSelector((state) => state.photos.perPage);
     const totalCount = useSelector((state) => state.photos.totalCount);
+    const pageCount = Math.ceil(totalCount/perPage);
 
     useEffect(() => {
-        dispatch(fetchPhotos(userId, currentPage));
+        setCurrentPage(1);
+        dispatch(fetchPhotos(userId, currentPage, perPage));
     }, [dispatch, currentPage]);
 
     return (
@@ -28,7 +31,7 @@ function User() {
                 error={error}
                 photos={photos}
                 currentPage={currentPage}
-                setBackPage={() => dispatch(setCurrentPage(currentPage - 1))}
+                setBackPage={() => dispatch(setCurrentPage(Math.max(1, currentPage - 1)))}
                 setNextPage={() => dispatch(setCurrentPage(currentPage + 1))}
             />
         </div>
