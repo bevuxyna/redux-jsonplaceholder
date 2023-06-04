@@ -15,10 +15,10 @@ function Users() {
     }, [dispatch]);
 
     return (
-        <div className='users__container'>
+        <main className='users__container'>
             <h1 className='users__title'>Users from JSONPlaceholder</h1>
             <UsersList loading={loading} error={error} users={users} />
-        </div>
+        </main>
     );
 }
 

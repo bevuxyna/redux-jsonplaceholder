@@ -1,10 +1,11 @@
-import {GET_PHOTOS_ERROR, GET_PHOTOS_FETCH, GET_PHOTOS_SUCCESS, SET_CURRENT_PAGE} from '../actions/actionTypes';
+import { GET_PHOTOS_ERROR, GET_PHOTOS_FETCH, GET_PHOTOS_SUCCESS, SET_CURRENT_PAGE } from '../actions/actionTypes';
 
 const defaultState = {
     photos: [],
     error: '',
     loading: false,
     currentPage: 1,
+    perPage: 10,
     totalCount: 0
 }
 
