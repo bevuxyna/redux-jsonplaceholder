@@ -1,7 +1,7 @@
 import './App.scss';
 import { Route, Routes } from 'react-router-dom';
-import Users from './Pages/Users/Users';
-import User from './Pages/User/User';
+import Users from '../../Pages/Users/Users';
+import User from '../../Pages/User/User';
 
 function App() {
   return (
