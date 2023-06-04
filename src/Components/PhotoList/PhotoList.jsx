@@ -1,27 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './PhotoList.scss';
 import PhotoCard from '../PhotoCard/PhotoCard';
 import Preloader from '../Preloader/Preloader';
 import Error from '../Error/Error';
 import Button from '../Button/Button';
 
-function PhotoList({ loading, error, foundPhotos }) {
-    const [photos, setPhotos] = useState([]);
-    const [maxCards, setMaxCards] = useState(10);
-
-    function setMovies() {
-        let photos = [];
-        foundPhotos.photos.forEach((item, i) => {
-            if (i < maxCards) {
-                photos.push(item);
-            }
-        });
-        setPhotos(photos);
-    }
-
-    useEffect(() => {
-        setMovies();
-    }, [foundPhotos]);
+function PhotoList({ loading, error, currentPage, photos, setBackPage, setNextPage }) {
 
     if (loading) {
         return <Preloader />;
@@ -35,11 +19,12 @@ function PhotoList({ loading, error, foundPhotos }) {
         <section className='photo-list'>
             <ul className='photo-list__container'>
                 {photos &&
-                    photos.map((photo) => {
+                    photos.photos.map((photo) => {
                         return (
                             <PhotoCard
                                 key={photo.id}
-                                id={photo.albumId}
+                                userId={photo.albumId}
+                                photoId={photo.id}
                                 link={photo.url}
                             />
                         )
@@ -47,8 +32,9 @@ function PhotoList({ loading, error, foundPhotos }) {
                 }
             </ul>
             <div className='photo-list__buttons'>
-                <Button buttonText='Back' />
-                <Button buttonText='Next' />
+                <Button buttonText='Back' onclick={setBackPage} />
+                <p>{currentPage}</p>
+                <Button buttonText='Next' onclick={setNextPage} />
             </div>
         </section>
     );
