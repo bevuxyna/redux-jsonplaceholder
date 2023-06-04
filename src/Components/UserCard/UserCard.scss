@@ -3,6 +3,7 @@
   flex-direction: column;
   row-gap: 10px;
   max-width: 300px;
+  max-height: 295px;
   list-style-type: none;
   margin: 0;
   padding: 30px;
@@ -23,7 +24,16 @@
   &:hover {
     cursor: pointer;
     opacity: 0.8;
+    max-height: 500px;
   }
+}
+
+.user-card__company {
+  opacity: 0;
+}
+
+.user-card:hover .user-card__company {
+  opacity: 1;
 }
 
 @media screen and (max-width: 675px) {

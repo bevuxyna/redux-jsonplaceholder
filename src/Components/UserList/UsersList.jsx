@@ -1,8 +1,13 @@
 import React from 'react';
 import './UsersList.scss';
 import UserCard from '../UserCard/UserCard';
+import Preloader from '../Preloader/Preloader';
 
-function UsersList({ users }) {
+function UsersList({ loading, users }) {
+    if (loading) {
+        return <Preloader />;
+    }
+
     return (
         <ul className='users-list__container'>
             {users &&
@@ -15,6 +20,7 @@ function UsersList({ users }) {
                         username={user.username}
                         email={user.email}
                         phone={user.phone}
+                        company={user.company}
                     />
                 )
             })

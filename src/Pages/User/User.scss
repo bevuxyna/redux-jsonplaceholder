@@ -1,3 +1,7 @@
+.user__container {
+  width: 100%;
+}
+
 .user__link {
   font-style: normal;
   font-weight: 500;
@@ -8,6 +12,7 @@
   margin-bottom: 15px;
   transition-duration: 0.7s;
   margin-left: 70px;
+  text-align: left;
 
   &:hover {
     cursor: pointer;
@@ -26,6 +31,7 @@
   display: flex;
   justify-content: center;
   column-gap: 10px;
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 1200px) {
