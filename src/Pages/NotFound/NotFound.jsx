@@ -4,7 +4,7 @@ import './NotFound.scss';
 
 function NotFound() {
     return (
-        <div className='not-found'>
+        <main className='not-found'>
             <h2 className='not-found__title'>404</h2>
             <p className='not-found__subtitle'>Page not found</p>
             <p className='not-found__text'>
@@ -12,7 +12,7 @@ function NotFound() {
                 {' '}
                 <Link to='/' className='not-found__link'>Home Page.</Link>
             </p>
-        </div>
+        </main>
     );
 }
 

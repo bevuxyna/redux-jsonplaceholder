@@ -16,23 +16,27 @@ function PhotoList({ loading, error, currentPage, photos, setBackPage, setNextPa
 
     return (
         <section className='photo-list'>
-            <ul className='photo-list__container'>
-                {photos &&
-                    photos.photos.map((photo) => {
-                        return (
-                            <PhotoCard
-                                key={photo.id}
-                                userId={photo.albumId}
-                                photoId={photo.id}
-                                link={photo.url}
-                            />
-                        )
-                    })
-                }
-            </ul>
+            {photos.photos.length !== 0 ? (
+                <ul className='photo-list__container'>
+                    {photos.photos.map((photo) => {
+                            return (
+                                <PhotoCard
+                                    key={photo.id}
+                                    userId={photo.albumId}
+                                    photoId={photo.id}
+                                    link={photo.url}
+                                />
+                            )
+                        })
+
+            }
+                </ul>
+            ) : (
+                <p className='photo-list__error'>No data</p>
+            )}
             <div className='photo-list__buttons'>
                 <Button buttonText='Back' onclick={setBackPage} />
-                <p>{currentPage}</p>
+                <p className='photo-list__page'>{currentPage}</p>
                 <Button buttonText='Next' onclick={setNextPage} />
             </div>
         </section>
