@@ -2,28 +2,56 @@
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  max-width: 300px;
+  max-width: 305px;
+  min-height: 360px;
   list-style-type: none;
   margin: 0;
   padding: 30px;
   background-color: #DFEDFD;
   border-radius: 12px;
+
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #141414;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition-duration: 0.7s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
 }
 
-.user-card__title {
+.user-card__company {
   font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
-  color: #141414;
-  text-decoration: none;
-  margin-bottom: 15px;
-  transition-duration: 0.7s;
+  max-width: 295px;
+  opacity: 0;
+  transition: opacity .35s ease-in-out;
+}
 
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
+.user-card__company-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #141414;
+  text-decoration: underline;
+}
+
+.user-card__company-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.user-card:hover .user-card__company {
+  opacity: 1;
 }
 
 @media screen and (max-width: 675px) {

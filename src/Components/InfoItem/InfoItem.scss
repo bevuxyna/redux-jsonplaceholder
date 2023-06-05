@@ -1,21 +1,22 @@
-.info-item__container {
+.info-item {
   display: flex;
   align-items: center;
+
+  &__image {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0;
+  }
 }
 
-.info-item__image {
-  width: 25px;
-  height: 25px;
-  margin-right: 5px;
-}
-
-.info-item__text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-  margin: 0;
-}
 
 @media screen and (max-width: 768px) {
   .info-item__image {
