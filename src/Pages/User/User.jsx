@@ -14,13 +14,11 @@ function User() {
     const error = useSelector((state) => state.photos.error);
     const currentPage = useSelector((state) => state.photos.currentPage);
     const perPage = useSelector((state) => state.photos.perPage);
-    // const totalCount = useSelector((state) => state.photos.totalCount);
-    // const pageCount = Math.ceil(totalCount/perPage);
 
     useEffect(() => {
         setCurrentPage(1);
         dispatch(fetchPhotos(userId, currentPage, perPage));
-    }, [dispatch, currentPage]);
+    }, [dispatch, userId, currentPage, perPage]);
 
     return (
         <div className='user__container'>
