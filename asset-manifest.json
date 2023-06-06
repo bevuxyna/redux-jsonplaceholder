@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/redux-jsonplaceholder/static/css/main.04bd1a6d.css",
-    "main.js": "/redux-jsonplaceholder/static/js/main.6f5ea939.js",
+    "main.js": "/redux-jsonplaceholder/static/js/main.c8a6f51d.js",
     "static/js/787.28cb0dcd.chunk.js": "/redux-jsonplaceholder/static/js/787.28cb0dcd.chunk.js",
     "static/media/Inter-Bold.woff": "/redux-jsonplaceholder/static/media/Inter-Bold.1e547cd04bfe2dae1f98.woff",
     "static/media/Inter-Medium.woff": "/redux-jsonplaceholder/static/media/Inter-Medium.44e343ff76a98508d309.woff",
@@ -16,11 +16,11 @@
     "static/media/call.svg": "/redux-jsonplaceholder/static/media/call.e0650f6fb363ff0a9068ddf74b6694d3.svg",
     "static/media/mail_outline.svg": "/redux-jsonplaceholder/static/media/mail_outline.07f92141678b6e46a4b1cc54a929369f.svg",
     "main.04bd1a6d.css.map": "/redux-jsonplaceholder/static/css/main.04bd1a6d.css.map",
-    "main.6f5ea939.js.map": "/redux-jsonplaceholder/static/js/main.6f5ea939.js.map",
+    "main.c8a6f51d.js.map": "/redux-jsonplaceholder/static/js/main.c8a6f51d.js.map",
     "787.28cb0dcd.chunk.js.map": "/redux-jsonplaceholder/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.04bd1a6d.css",
-    "static/js/main.6f5ea939.js"
+    "static/js/main.c8a6f51d.js"
   ]
 }
