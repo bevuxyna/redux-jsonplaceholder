@@ -1,5 +1,8 @@
-.user__container {
+.users__container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .user__link {

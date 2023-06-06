@@ -3,7 +3,7 @@
   flex-direction: column;
   row-gap: 10px;
   max-width: 305px;
-  min-height: 360px;
+  //min-height: 360px;
   list-style-type: none;
   margin: 0;
   padding: 30px;
@@ -63,5 +63,15 @@
     font-size: 20px;
     line-height: 25px;
     margin-bottom: 10px;
+  }
+
+  .user-card__company-title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .user-card__company-text {
+    font-size: 16px;
+    line-height: 21px;
   }
 }
