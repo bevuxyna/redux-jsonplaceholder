@@ -1,3 +1,9 @@
+.users__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .users__title {
   text-align: center;
   margin-top: 0;
@@ -11,5 +17,7 @@
   .users__title {
     font-size: 29px;
     line-height: 37px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

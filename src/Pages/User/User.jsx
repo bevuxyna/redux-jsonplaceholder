@@ -23,7 +23,7 @@ function User() {
     }, [dispatch, currentPage]);
 
     return (
-        <div className='users__container'>
+        <div className='user__container'>
             <Link to='/' className='user__link'>Back to users list</Link>
             <h2 className='user__title'>{`User ${userId} photos`}</h2>
             <PhotoList
